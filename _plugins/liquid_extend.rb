@@ -17,7 +17,7 @@ module LiquidExtend
     input.strip.gsub("\n\n","\n").gsub(/^/m, (["\t"] * num).join)
   end
   def check_if_blank(input)
-    input.length>0?input:"No Content."
+    input.length>0?input:"No content."
   end
   
   Liquid::Template.register_filter self
