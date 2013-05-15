@@ -1,0 +1,17 @@
+url: http://www.qnnsafes.com
+
+name: QNNSafes
+
+title: QNNSafes
+
+description: QNNSafes
+
+keywords: QNNSafes
+
+p_img_cdn: http://test.html9.com/image-pro/
+
+exclude: ['README.md', 'LICENSE']
+
+markdown: rdiscount
+
+permalink: :title.html

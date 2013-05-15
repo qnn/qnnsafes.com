@@ -1,0 +1,144 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+margin: 0; padding: 0; border: 0; vertical-align: baseline; font-family: Arial, sans;
+}
+pre, code, tt, pre *, code *, tt * {
+font-size: 14px;
+font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+.clear {
+clear: both;
+}
+.hidden {
+display: none;
+}
+body {
+background: #eeeeee;
+}
+.main {
+width: 1000px;
+margin: 0 auto;
+background: #fff;
+}
+.header {
+position: relative;
+height: 90px;
+}
+.logo {
+position: absolute;
+top: 20px;
+left: 30px;
+}
+.logo a.logolnk {
+background: url(../images/qnnsafelogo.png) no-repeat 0 0;
+text-indent: -9999px;
+width: 300px;
+height: 47px;
+display: block;
+}
+.nav {
+position: absolute;
+top: 32px;
+left: 380px;
+}
+.nav ul {
+list-style: none;
+}
+.nav ul li {
+float: left;
+overflow: hidden;
+width: 116px;
+height: 35px;
+}
+.nav ul li a {
+display: block;
+font-size: 12px;
+height: 35px;
+line-height: 35px;
+text-align: center;
+text-decoration: none;
+width: 116px;
+color: #666666;
+}
+.nav ul li a:hover, .nav ul li a.current {
+color: #ed3237;
+}
+.showcase {
+width: 1000px;
+height: 400px;
+overflow: hidden;
+}
+.showcase img {
+width: 1000px;
+height: 400px;
+}
+.divide {
+margin: 8px 0;
+}
+.divide_item {
+border: 1px solid #CCCCCC;
+float: left;
+height: 170px;
+margin: 0 8px;
+width: 230px;
+}
+.divide_item img {
+display: block;
+width: 200px;
+height: 120px;
+margin: 13px 15px;
+}
+.divide_item a {
+text-decoration: none;
+}
+.divide_item a:hover {
+text-decoration: underline;
+}
+.divide_item em {
+display: block;
+background: url(../images/greygrad.png) repeat-x 0 0;
+color: #333;
+font-size: 14px;
+height: 23px;
+line-height: 23px;
+margin: 0;
+text-align: center;
+overflow: hidden;
+font-style: normal;
+border-top: 1px solid #D9D9D9;
+}
+.footer {
+background: url(../images/greygrad_long.png) repeat-x 0 0;
+height: 120px;
+position: relative;
+}
+.foot_logo {
+position: absolute;
+top: 38px;
+left: 50px;
+display: block;
+background: url(../images/qnnsafelogo-210px.png) no-repeat 0 0;
+text-indent: -9999px;
+width: 210px;
+height: 33px;
+}
+.foot_text {
+position: relative;
+top: 27px;
+left: 330px;
+width: 650px;
+height: 85px;
+}
+.foot_text p {
+color: #666666;
+font-size: 12px;
+margin: 12px 0;
+}
+.foot_text p a {
+font-size: 12px;
+color: #666666;
+text-decoration: none;
+}
+.foot_text p a:hover {
+text-decoration: underline;
+}
+

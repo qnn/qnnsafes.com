@@ -1,0 +1,18 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{% for sp in site.pages %}{% capture spurl %}{{ sp.url | remove:'index.html' }}{% endcapture %}{% capture lastchar %}{{ spurl | lastchar }}{% endcapture %}{% if lastchar == '/' %}
+<url>
+   <loc>{{ site.url }}{{ spurl }}</loc>
+   <lastmod>{{ site.time | date:'%Y-%m-%d' }}</lastmod>
+   <changefreq>daily</changefreq>
+   <priority>{% if spurl == '/' %}1.0{% else %}0.8{% endif %}</priority>
+</url>{% endif %}{% endfor %}{% for post in site.posts %}
+<url>
+   <loc>{{ site.url }}{{ post.url }}</loc>
+   <lastmod>{{ site.time | date:'%Y-%m-%d' }}</lastmod>
+   <changefreq>daily</changefreq>
+   <priority>0.6</priority>
+</url>{% endfor %}
+</urlset>

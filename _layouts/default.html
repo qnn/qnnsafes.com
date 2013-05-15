@@ -1,0 +1,27 @@
+{% include top.html %}
+	<div class="main">
+		<div class="header">
+			<div class="logo">
+				<a class="logolnk" href="/">QNNSafes</a>
+			</div>
+			<div class="nav">
+				<ul>
+					<li><a{% if page.url == '/index.html' %} class="current"{% endif %} href="/">Home</a></li>
+					<li><a{% if page.url contains '/about/' %} class="current"{% endif %} href="/about/">About Us</a></li>
+					<li><a{% if page.url contains '/products/' %} class="current"{% endif %} href="/products/">Products</a></li>
+					<li><a{% if page.url contains '/service/' %} class="current"{% endif %} href="/service/">Service Center</a></li>
+					<li><a{% if page.url contains '/contact/' %} class="current"{% endif %} href="/contact/">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+{{ content }}
+		<div class="footer">
+			<a class="foot_logo" href="/">QNNSafes</a>
+			<div class="foot_text">
+				<p class="address">Address: Tak Cheung Road, Foshan, Shunde, Guangdong Province, China</p>
+				<p class="copy">Copyright &copy; 1999-2013 Guangdong QNN Safe Manufacturing Co., Ltd</p>
+				<p class="powered">Design by <a href="http://www.8html.com" target="_blank">8HTML</a></p>
+			</div>
+		</div>
+	</div>
+{% include bottom.html %}
