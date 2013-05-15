@@ -19,6 +19,9 @@ module LiquidExtend
   def check_if_blank(input)
     input.length>0?input:"No content."
   end
+  def filename_prepend(input, content)
+    File.dirname(input) + '/' + content + File.basename(input)
+  end
   
   Liquid::Template.register_filter self
 end
