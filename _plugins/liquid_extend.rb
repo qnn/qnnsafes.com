@@ -11,7 +11,7 @@ module LiquidExtend
     (input[0, 7] == "http://" || input[0, 8] == "https://" ? '' : relative) + input
   end
   def sub_img_cdn(input, cdn)
-    input.gsub('{PRODUCT_IMAGES}', cdn)
+    input.gsub('{PRODIMGS}', cdn)
   end
   def indent(input, num)
     input.strip.gsub("\n\n","\n").gsub(/^/m, (["\t"] * num).join)
