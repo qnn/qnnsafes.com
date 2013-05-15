@@ -16,6 +16,9 @@ module LiquidExtend
   def indent(input, num)
     input.strip.gsub("\n\n","\n").gsub(/^/m, (["\t"] * num).join)
   end
+  def check_if_blank(input)
+    input.length>0?input:"No Content."
+  end
   
   Liquid::Template.register_filter self
 end

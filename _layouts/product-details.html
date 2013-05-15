@@ -42,13 +42,13 @@ more_scripts: ["scripts/jquery-etalage-1.3.1.min.js"]
 					<div class="pc2hr"></div>
 					<div class="maincontent mt10px">
 						<div class="mc mc1">
-{{ page.features | markdownify | indent:6 }}
+{{ page.features | check_if_blank | markdownify | indent:6 }}
 						</div>
 						<div class="mc mc2 hidden">
-{{ page.specs | markdownify | indent:6 }}
+{{ page.specs | check_if_blank | markdownify | indent:6 }}
 						</div>
 						<div class="mc mc3 hidden">
-{{ content | indent:6 }}
+{{ page.content | check_if_blank | markdownify | indent:6 }}
 						</div>
 					</div>
 				</div>
