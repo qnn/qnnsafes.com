@@ -14,20 +14,20 @@ exclude: ['README.md', 'LICENSE']
 
 markdown: rdiscount
 
-permalink: :title.html
+permalink: :categories/:title.html
 
 categories_for_products: [
-  ["hotel-safe",              "Hotel Safe"],
-  ["gun-safe",                "Gun Safe"],
-  ["commercial-safe",         "Commercial Safe"],
-  ["fireproof-safe",          "Fireproof Safe"],
-  ["filing-cabinet-safe",     "Filing Cabinet Safe"],
-  ["burglary-and-fire-safe",  "Burglary and Fire Safe"],
-  ["locker",                  "Locker"],
-  ["wall-safe",               "Wall Safe"],
-  ["floor-safe",              "Floor Safe"],
-  ["deposit-Safe",            "Deposit Safe"],
-  ["fingerprint-safe",        "Fingerprint Safe"],
-  ["home-or-office-safe",     "Home or Office Safe"],
-  ["new-safe",                "New Safe"],
+  ["new-safes",                "New Safes"],
+  ["hotel-safes",              "Hotel Safes"],
+  ["gun-safes",                "Gun Safes"],
+  ["commercial-safes",         "Commercial Safes"],
+  ["fireproof-safes",          "Fireproof Safes"],
+  ["filing-cabinet-safes",     "Filing Cabinet Safes"],
+  ["burglary-and-fire-safes",  "Burglary and Fire Safes"],
+  ["lockers",                  "Lockers"],
+  ["wall-safes",               "Wall Safes"],
+  ["floor-safes",              "Floor Safes"],
+  ["depository-safes",         "Depository Safes"],
+  ["fingerprint-safes",        "Fingerprint Safes"],
+  ["home-or-office-safes",     "Home or Office Safes"],
 ]
