@@ -8,10 +8,26 @@ description: QNNSafes
 
 keywords: QNNSafes
 
-p_img_cdn: http://test.html9.com/image-pro/
+image_cdn: http://test.html9.com
 
 exclude: ['README.md', 'LICENSE']
 
 markdown: rdiscount
 
 permalink: :title.html
+
+categories_for_products: [
+  ["hotel-safe",              "Hotel Safe"],
+  ["gun-safe",                "Gun Safe"],
+  ["commercial-safe",         "Commercial Safe"],
+  ["fireproof-safe",          "Fireproof Safe"],
+  ["filing-cabinet-safe",     "Filing Cabinet Safe"],
+  ["burglary-and-fire-safe",  "Burglary and Fire Safe"],
+  ["locker",                  "Locker"],
+  ["wall-safe",               "Wall Safe"],
+  ["floor-safe",              "Floor Safe"],
+  ["deposit-Safe",            "Deposit Safe"],
+  ["fingerprint-safe",        "Fingerprint Safe"],
+  ["home-or-office-safe",     "Home or Office Safe"],
+  ["new-safe",                "New Safe"],
+]

@@ -141,4 +141,136 @@ text-decoration: none;
 .foot_text p a:hover {
 text-decoration: underline;
 }
+.propanel {
+background: #FBFDFD;
+box-shadow: 0 0 8px -1px #333;
+}
+.twocols {
+margin-top: 15px;
+border-top: 1px solid #ECECEC;
+}
+.twocols_left {
+float:left;
+border-right: 1px solid #ECECEC;
+width: 230px;
+margin: 0 8px 0 0;
+}
+.twocols_left h2 {
+text-align: center;
+color: #D71920;
+padding: 15px 10px;
+}
+.twocols_left ul {
+list-style: none;
+}
+.twocols_left ul li {
 
+}
+.twocols_left ul li a {
+background: url(../images/indicator.png) no-repeat 210px 11px;
+border-top: 1px solid #ECECEC;
+color: #8C8C8C;
+display: block;
+font-size: 14px;
+height: 30px;
+line-height: 30px;
+padding-left: 15px;
+text-decoration: none;
+}
+.twocols_left ul li a:hover {
+background: #990000 url(../images/indicator_wht.png) no-repeat 210px 11px;
+color: #fff;
+text-decoration: none;
+}
+.twocols_right {
+float: left;
+width: 760px;
+}
+.position {
+border-bottom: 1px solid #C2C2C2;
+color: #D71920;
+font-size: 12px;
+font-weight: bolder;
+height: 30px;
+line-height: 30px;
+}
+.position a {
+font-size: 12px;
+color: #111;
+text-decoration: none;
+}
+.position a:hover {
+font-size: 12px;
+color: #111;
+text-decoration: underline;
+}
+.productlist h3 {
+border-bottom: 1px dotted #C2C2C2;
+color: #000000;
+font-size: 20px;
+font-weight: bold;
+height: 32px;
+line-height: 32px;
+padding: 0 5px;
+margin: 12px 5px 12px 0;
+}
+.prodsublist .psli {
+height: 190px;
+width: 188px;
+overflow: hidden;
+float: left;
+}
+.prodsublist img {
+display: block;
+border: 1px solid #CCC;
+padding: 5px;
+height: 150px;
+width: 150px;
+margin-bottom: 3px;
+}
+.prodsublist .psli a {
+display: block;
+height: 188px;
+width: 162px;
+text-align: center;
+font-size: 13px;
+color: #666;
+text-decoration: none;
+margin: 0 auto;
+}
+.prodsublist .psli a:hover {
+font-size: 13px;
+color: #D71920;
+text-decoration: underline;
+}
+
+/* totop */
+#toTop {
+display:none;
+text-decoration:none;
+position:fixed;
+bottom:10px;
+right:10px;
+overflow:hidden;
+width:51px;
+height:51px;
+border:none;
+text-indent:100%;
+background:url(../images/ui.totop.png) no-repeat left top;
+}
+
+#toTopHover {
+background:url(../images/ui.totop.png) no-repeat left -51px;
+width:51px;
+height:51px;
+display:block;
+overflow:hidden;
+float:left;
+opacity: 0;
+-moz-opacity: 0;
+filter:alpha(opacity=0);
+}
+
+#toTop:active, #toTop:focus {
+outline:none;
+}
