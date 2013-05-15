@@ -17,7 +17,6 @@ markdown: rdiscount
 permalink: :categories/:title.html
 
 categories_for_products: [
-  ["new-safes",                "New Safes"],
   ["hotel-safes",              "Hotel Safes"],
   ["gun-safes",                "Gun Safes"],
   ["commercial-safes",         "Commercial Safes"],
@@ -30,4 +29,5 @@ categories_for_products: [
   ["depository-safes",         "Depository Safes"],
   ["fingerprint-safes",        "Fingerprint Safes"],
   ["home-or-office-safes",     "Home or Office Safes"],
+  ["new-safes",                "New Safes"],
 ]
