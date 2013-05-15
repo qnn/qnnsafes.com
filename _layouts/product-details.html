@@ -1,18 +1,57 @@
 ---
 layout: default
-more_scripts: ["scripts/jquery.lazyload-1.8.4.min.js"]
+more_scripts: ["scripts/jquery-etalage-1.3.1.min.js"]
 ---
 		<div class="twocols">
 			<div class="twocols_left propanel">
 				<h2>Products</h2>
 				<ul>{% for category in site.categories_for_products %}{% capture cat %}{{ category[0] }}{% endcapture %}{% if cat == page.category %}{% capture current_category %}{{ category[0] }}{% endcapture %}{% capture current_category_name %}{{ category[1] }}{% endcapture %}{% endif %}{% for post in site.categories[cat] limit:1 %}
-					<li><a href="{{ post.url }}">{{ category[1] }}</a></li>{% endfor %}{% endfor %}
+					<li><a{% if cat == page.category %} class="current"{% endif %} href="{{ post.url }}">{{ category[1] }}</a></li>{% endfor %}{% endfor %}
 				</ul>
 			</div>
 			<div class="twocols_right">
 				<p class="position">
 					Location: <a href="/">Home</a> &raquo; <a href="/products/">Products</a> &raquo; <a href="/products/{{ current_category }}/">{{ current_category_name }}</a> &raquo; {{ page.name }}
 				</p>
+				<div class="gcontent">
+					<div class="rtp">
+						<h3>{{ current_category_name }}</h3>
+						<ul class="rtpul">
+{{ page.info | markdownify | indent:7 | remove:'</ul>' | remove:'<ul>' }}
+							<li>
+								<div class="clear">Models in category:</div>{% for post in site.categories[page.category] %}
+								<a class="otherq{% if post.name == page.name %} otherqcur{% endif %}" href="{{ post.url }}" title="{{ post.name }}"><img src="{{ site.image_cdn }}{{ post.images[0] }}" /><br />{{ post.name }}</a>{% endfor %}
+								<div class="clear"></div>
+							</li>
+						</ul>
+					</div>
+					<div class="lfp">
+						<ul id="etalage">{% for image in page.images %}
+							<li><img class="etalage_source_image" src="{{ site.image_cdn }}{{ image }}" /></li>{% endfor %}
+						</ul>
+					</div>
+					<div class="clear"></div>
+					<div class="tabbtns mt10px">
+						<ul>
+							<li><a href="javascript:;" class="tabbtn sel">Features</a></li>
+							<li><a href="javascript:;" class="tabbtn">Specs</a></li>
+							<li><a href="javascript:;" class="tabbtn">Additional Info</a></li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+					<div class="pc2hr"></div>
+					<div class="maincontent mt10px">
+						<div class="mc mc1">
+{{ page.features | markdownify | indent:6 }}
+						</div>
+						<div class="mc mc2 hidden">
+{{ page.specs | markdownify | indent:6 }}
+						</div>
+						<div class="mc mc3 hidden">
+{{ content | indent:6 }}
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="clear"></div>
 		</div>

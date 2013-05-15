@@ -177,14 +177,19 @@ line-height: 30px;
 padding-left: 15px;
 text-decoration: none;
 }
-.twocols_left ul li a:hover {
-background: #990000 url(../images/indicator_wht.png) no-repeat 210px 11px;
+.twocols_left ul li a:hover, .twocols_left ul li a.current {
+background: #D71920 url(../images/indicator_wht.png) no-repeat 210px 11px;
 color: #fff;
 text-decoration: none;
 }
 .twocols_right {
 float: left;
 width: 760px;
+min-height: 800px;
+height: auto !important;
+height: 800px;
+overflow: visible;
+overflow-x: hidden;
 }
 .position {
 border-bottom: 1px solid #C2C2C2;
@@ -242,6 +247,169 @@ margin: 0 auto;
 font-size: 13px;
 color: #D71920;
 text-decoration: underline;
+}
+
+.gcontent {
+width: 730px;
+margin: 20px auto;
+}
+.rtp {
+float: right;
+width: 450px;
+margin: 0;
+}
+.rtp h3 {
+font-size: 16px;
+margin: 0 0 10px;
+}
+.rtpul {
+list-style: none;
+}
+.rtpul li {
+font-size: 13px;
+padding: 3px 0 5px;
+}
+.rtpul li div {
+font-size: 13px;
+margin: 0 0 5px 0;
+}
+#etalage{
+display: none;
+}
+#etalage .etalage_thumb{
+background: white url(../images/loading.gif) center no-repeat;
+-webkit-box-shadow: 0 0 7px #aaa;
+-moz-box-shadow: 0 0 7px #aaa;
+box-shadow: 0 0 7px #aaa;
+}
+#etalage .etalage_small_thumbs li{
+margin: 5px;
+cursor: pointer;
+}
+#etalage ul li.etalage_smallthumb_active{
+cursor: default;
+}
+#etalage .etalage_zoom_area, .etalage_zoom_area{
+background: url(../images/loading.gif) center no-repeat;
+-webkit-box-shadow: 0 0 5px #333;
+-moz-box-shadow: 0 0 5px #333;
+box-shadow: 0 0 5px #333;
+}
+#etalage .etalage_magnifier{
+background: white;
+-webkit-box-shadow: 0 0 5px #000;
+-moz-box-shadow: 0 0 5px #000;
+}
+.etalage, .etalage_thumb, .etalage_thumb_image, .etalage_source_image, .etalage_zoom_preview, .etalage_icon, .etalage_hint{ display:none }
+.etalage, .etalage ul, .etalage li, .etalage img, .etalage_hint, .etalage_icon, .etalage_description{ margin:0; padding:0; border:0; list-style:none }
+.etalage, .etalage_magnifier div, .etalage_magnifier div img, .etalage_small_thumbs ul, ul .etalage_small_thumbs li, .etalage_zoom_area div, .etalage_zoom_img{ position:relative }
+.etalage img, .etalage li{ -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -o-user-select:none; user-select:none; -webkit-user-drag:none; -moz-user-drag:none; user-drag:none }
+.etalage, .etalage_small_thumbs li{ float:left }
+.etalage_right{ float:right }
+.etalage li{ position:absolute }
+.etalage img{ vertical-align:bottom }
+.etalage_magnifier{ cursor:default }
+.etalage_magnifier div, .etalage_small_thumbs{ overflow:hidden }
+.etalage_magnifier div img{ display:none }
+.etalage_icon, .etalage_hint{ cursor:default; width:0; height:0; overflow:hidden }
+.etalage_small_thumbs li.vertical{ float:none }
+.etalage_zoom_area div{ overflow:hidden; z-index:997 }
+.etalage_zoom_preview{ position:absolute; z-index:998 }
+.etalage_zoom_img, .etalage_hint{ z-index:999 }
+.etalage{ direction:ltr }
+div.etalage_description{ position:absolute; bottom:0; left:0; z-index:999 }
+div.etalage_description.rtl{ direction:rtl }
+
+.tabbtns {
+height: 25px;
+overflow: hidden;
+margin: 30px 0 10px !important;
+}
+.tabbtns ul {
+list-style: none;
+}
+.tabbtns li {
+float: left;
+width: 120px;
+height: 25px;
+margin: 0 5px 0 0;
+}
+.tabbtns a {
+font-size: 13px;
+color: #666;
+text-decoration: none;
+}
+.tabbtns a:hover {
+font-size: 13px;
+color: #fff;
+text-decoration: none;
+background: #D71920;
+}
+.tabbtn {
+width: 120px;
+height: 25px;
+display: block;
+line-height: 25px;
+text-align: center;
+color: #666666;
+background: #DCD9D9;
+}
+a.sel {
+text-decoration: none;
+color: #fff;
+background: #D71920;
+}
+a.sel:hover {
+text-decoration: none;
+}
+
+.mc h2 {
+font-size: 16px;
+margin: 10px 0;
+}
+.mc h3 {
+font-size: 14px;
+margin: 15px 0 10px;
+}
+.mc ul, .mc ol {
+margin: 10px 10px 10px 21px;
+}
+.mc li {
+font-size: 13px;
+padding: 3px 0;
+line-height: 20px;
+}
+.mc p {
+font-size: 13px;
+line-height: 20px;
+}
+a.otherq {
+border: 1px solid #c8c9cd;
+padding: 3px;
+margin: 0 3px 3px 0;
+display: block;
+font-size: 12px;
+color: #000;
+text-decoration: none;
+float: left;
+background: #fff;
+text-align: center;
+height: 76px;
+}
+a.otherq:hover {
+font-size: 12px;
+color: #fff;
+text-decoration: underline;
+background: #D71920;
+}
+a.otherq img {
+width: 60px;
+height: 60px;
+}
+.otherqcur {
+font-weight: bold;
+color: #fff !important;
+background: #D71920 !important;
 }
 
 /* totop */
