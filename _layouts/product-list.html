@@ -1,0 +1,26 @@
+---
+layout: default
+more_scripts: ["scripts/jquery.lazyload-1.8.4.min.js"]
+---
+		<div class="twocols">
+			<div class="twocols_left propanel">
+				<h2>Products</h2>
+				<ul>{% for category in site.categories_for_products %}{% capture cat %}{{ category[0] }}{% endcapture %}{% for post in site.categories[cat] limit:1 %}
+					<li><a href="{{ post.url }}">{{ category[1] }}</a></li>{% endfor %}{% endfor %}
+				</ul>
+			</div>
+			<div class="twocols_right">
+				<p class="position">
+					Location: <a href="/">Home</a> &raquo; <a href="/products/">Products</a>
+				</p>
+				<div class="productlist">{% for category in site.categories_for_products %}{% capture cat %}{{ category[0] }}{% endcapture %}
+					<h3>{{ category[1] }}</h3>
+					<div class="prodsublist">{% for post in site.categories[cat] %}
+						<div class="psli"><a href="{{ post.url }}"><img class="lazy" data-original="{{ site.image_cdn }}{{ post.images[0] }}" src="/images/white.gif" />{{ post.name }}</a></div>{% endfor %}
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>{% endfor %}
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
