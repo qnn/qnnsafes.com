@@ -58,6 +58,7 @@ text-align: center;
 text-decoration: none;
 width: 116px;
 color: #666666;
+font-weight: bold;
 }
 .nav ul li a:hover, .nav ul li a.current {
 color: #ed3237;
@@ -141,7 +142,7 @@ margin: 8px 0;
 border: 1px solid #CCCCCC;
 float: left;
 height: 170px;
-margin: 0 8px;
+margin: 0 0 0 14px;
 width: 230px;
 }
 .divide_item img {
@@ -203,6 +204,9 @@ text-decoration: none;
 }
 .foot_text p a:hover {
 text-decoration: underline;
+}
+.foot_text p.powered, .foot_text p.powered a {
+font-size: 11px;
 }
 .propanel {
 background: #FBFDFD;
@@ -493,6 +497,9 @@ padding: 20px;
 .wcontent .context .fw_img {
 padding: 10px;
 text-align: center;
+}
+.wcontent .context .fw_img img {
+box-shadow: 0 0 6px 1px #333;
 }
 .wcontent .context p {
 font-size: 14px;
