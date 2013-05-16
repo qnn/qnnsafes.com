@@ -439,13 +439,13 @@ margin: 20px 0;
 }
 .wcontent .context a {
 font-size: 14px;
-color: #333;
-text-decoration: underline;
+color: #ED3237;
+text-decoration: none;
 }
 .wcontent .context a:hover {
 font-size: 14px;
-color: #333;
-text-decoration: none;
+color: #ED3237;
+text-decoration: underline;
 }
 /* totop */
 #toTop {
