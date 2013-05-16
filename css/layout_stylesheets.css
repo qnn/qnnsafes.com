@@ -212,6 +212,11 @@ font-size: 11px;
 background: #FBFDFD;
 box-shadow: 0 0 8px -1px #333;
 }
+#leftprolist.fixed {
+position: fixed;
+z-index: 9999;
+top: 0;
+}
 .twocols {
 margin-top: 15px;
 border-top: 1px solid #ECECEC;
@@ -250,7 +255,7 @@ color: #fff;
 text-decoration: none;
 }
 .twocols_right {
-float: left;
+float: right;
 width: 760px;
 min-height: 800px;
 height: auto !important;

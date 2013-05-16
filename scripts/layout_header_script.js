@@ -51,6 +51,20 @@ $(function(){
 		$(".maincontent div.mc").hide();
 		$(".maincontent div").eq(a).show()
 	});
+	if ($('#leftprolist').length == 1) {
+		var menuOffset = $('#leftprolist')[0].offsetTop;
+		$(document).bind('ready scroll',function() {
+			var docScroll = $(document).scrollTop();
+			if(docScroll >= menuOffset) {
+				$('#leftprolist').addClass('fixed').css({left:$('#header').position().left-document.body.scrollLeft});
+			} else {
+				$('#leftprolist').removeClass('fixed');
+			}
+		});
+	}
+	$(window).bind('resize',function(){
+		if ($('#leftprolist').hasClass('fixed')) $('#leftprolist').css({left:$('#header').position().left-document.body.scrollLeft});
+	});
 	if ($("#main_case").length == 1) {
 		$.getJSON('/products/catelog.json', function(CAT){
 			window.CAT = CAT;
