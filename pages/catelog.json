@@ -4,7 +4,7 @@ permalink: /products/catelog.json
 ---
 {
 {% for category in site.categories_for_products %}{% capture cat %}{{ category[0] }}{% endcapture %}{% if forloop.first == false %},{% endif %}
-"{{ category[0] }}": [{% for post in site.categories[cat] %}{% if forloop.first == false %},{% endif %}
+"{{ category[0] }}": [{% for post in site.categories[cat] reversed %}{% if forloop.first == false %},{% endif %}
 { "name": "{{ post.name }}", "link": "{{ post.url }}", "image": "{{ post.images[0] }}" }{% endfor %}
 ]{% endfor %}
 }

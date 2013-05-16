@@ -16,7 +16,7 @@ more_scripts: ["scripts/jquery.lazyload-1.8.4.min.js"]
 				</p>
 				<div class="productlist">
 					<h3>{{ current_category_name }}</h3>
-					<div class="prodsublist">{% for post in site.categories[current_category] %}
+					<div class="prodsublist">{% for post in site.categories[current_category] reversed %}
 						<div class="psli"><a href="{{ post.url }}"><img class="lazy" data-original="{{ site.image_cdn }}{{ post.images[0] | filename_prepend:'150px/' }}" src="/images/white.gif" />{{ post.name }}</a></div>{% endfor %}
 						<div class="clear"></div>
 					</div>
@@ -29,7 +29,7 @@ more_scripts: ["scripts/jquery.lazyload-1.8.4.min.js"]
 				<div class="productlist">{% for category in site.categories_for_products %}{% capture cat %}{{ category[0] }}{% endcapture %}
 					<a class="anchors" name="{{ category[0] }}"></a>
 					<h3>{{ category[1] }}</h3>
-					<div class="prodsublist">{% for post in site.categories[cat] %}
+					<div class="prodsublist">{% for post in site.categories[cat] reversed %}
 						<div class="psli"><a href="{{ post.url }}"><img class="lazy" data-original="{{ site.image_cdn }}{{ post.images[0] | filename_prepend:'150px/' }}" src="/images/white.gif" />{{ post.name }}</a></div>{% endfor %}
 						<div class="clear"></div>
 					</div>
