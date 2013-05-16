@@ -83,11 +83,11 @@ z-index: 1;
 .showcase_list {
 width: 228px;
 list-style: none;
-box-shadow: 0 0 10px #333;
+box-shadow: 0 0 6px 1px #333;
 position: absolute;
 top: 20px;
 left: 20px;
-z-index: 2;
+z-index: 10;
 }
 .showcase_list li {
 height: 26px;
@@ -122,6 +122,18 @@ left: 210px;
 }
 .showcase_list a div.indicator_wht, .showcase_list a.current div.indicator {
 background: url(../images/indicator_wht.png) no-repeat 0 0;
+}
+.subcaselist {
+z-index: 9;
+}
+.subcaselist a {
+text-indent: 15px;
+}
+.subcaselist2 {
+z-index: 8;
+}
+.subcaselist2 a {
+text-indent: 15px;
 }
 .showcase_details img {
 width: 240px;

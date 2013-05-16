@@ -68,67 +68,75 @@ $(function(){
 	if ($("#main_case").length == 1) {
 		$.getJSON('/products/catelog.json', function(CAT){
 			window.CAT = CAT;
+			window.CASE = {};
+			var reset=function(){
+				$('#showcase').find('.subcaselist, .subcaselist2').addClass('hidden');
+				$('#showcase .showcase_details').fadeOut(200, function(){$(this).addClass('hidden');});
+				$('#showcase .bg').fadeTo(200, 1.0);
+				$('#main_case a').removeClass('current');
+				$('#main_case .indicator').removeClass('indicator_wht');
+			};
 			$('#main_case a').each(function(){
-				$(this).hoverIntent(function(){
-					$('#showcase .bg').fadeTo(100, 0.5);
-					clearTimeout(window.sto);
-					window.sto=undefined;
-					clearTimeout(window.ssto);
-					window.ssto=undefined;
-					$('#main_case a').removeClass('current');
-					$(this).addClass('current');
-					$('#showcase .showcase_details').addClass('hidden');
+				window.CASE[$(this).data('category')]=$(this).text();
+				$(this).hover(function(){
+					$('#main_case .indicator').removeClass('indicator_wht');
 					$('.indicator', this).addClass('indicator_wht');
+				});
+				$(this).hoverIntent(function(){
+					$('#showcase .bg').fadeTo(200, 0.5);
+					$('#main_case a').removeClass('current');
+					window.clearTimeout(window.sto);
+					window.clearTimeout(window.sto2);
+					window.clearTimeout(window.sto3);
+					var sublist=$('#showcase .subcaselist'), sublist2=$('#showcase .subcaselist2');
 					var cat=$(this).data('category');
-					var sublist=$('#showcase .subcaselist'), sublist2=$('#showcase .subcaselist2'), i;
-					sublist.attr('data-belongsto', cat).empty();
-					sublist2.attr('data-belongsto', cat).empty();
+					sublist.empty();
+					sublist2.empty();
 					for (i=0; i<CAT[cat].length; i++) {
 						if (i==27) {
 							CAT[cat][i].name="More...";
 						} else if (i>27) {
 							break;
 						}
-						$('<li />').append($('<a class="sd" data-image="'+CAT[cat][i].image+'" href="'+CAT[cat][i].link+'">'+CAT[cat][i].name+'</a>').hoverIntent(function(){
-							clearTimeout(window.ssto);
-							window.ssto=undefined;
-							$(this).addClass('current');
-							$('#showcase').find('.subcaselist, .subcaselist2').removeClass('hidden');
-							var fpar=$('#main_case a[data-category="'+$(this).parents('.showcase_list').attr('data-belongsto')+'"]');
-							$('#showcase .showcase_details').empty().append('<a href="'+$(this).attr('href')+'"><img src="{{ site.image_cdn }}'+$(this).data('image')+'" /></a><h3>'+fpar.text()+'<br />'+$(this).text()+'</h3>').removeClass('hidden');
+						var alink=$('<a class="sd" data-image="'+CAT[cat][i].image+'" href="'+CAT[cat][i].link+'">'+CAT[cat][i].name+'</a>');
+						alink.hover(function(){
+							$('#main_case a[data-category="'+cat+'"]').addClass('current');
+						});
+						alink.hoverIntent(function(){
+							window.clearTimeout(window.sto);
+							window.clearTimeout(window.sto2);
+							window.clearTimeout(window.sto3);
+							$('#showcase .showcase_details').empty().append('<a href="'+$(this).attr('href')+'"><img src="{{ site.image_cdn }}'+$(this).data('image')+'" /></a><h3>'+window.CASE[cat]+'<br />'+$(this).text()+'</h3>');
+							if ($('#showcase .showcase_details').hasClass('hidden')) {
+								$('#showcase .showcase_details').removeClass('hidden').hide().fadeIn(200);
+							}
 						}, function(){
-							$(this).removeClass('current');
-							window.ssto=setTimeout(function(){
-								if ($('#showcase').find('.subcaselist a.current, .subcaselist2 a.current').length==0) {
-									$('#main_case a').removeClass('current');
-									$('#showcase').find('.subcaselist, .subcaselist2').addClass('hidden');
-									$('#showcase .showcase_details').addClass('hidden');
-									$('#showcase .bg').fadeTo(100, 1.0);
-								}
-							}, 1000);
-						})).appendTo(
-							i<14 ? sublist : sublist2
-						);
+							window.sto2=window.setTimeout(reset, 1000);
+						});
+						$('<li />').append(alink).appendTo(i<14 ? sublist : sublist2);
 					}
-					sublist.removeClass('hidden').css({left: $('#main_case').position().left+$('#main_case').width()});
+					sublist.removeClass('hidden').css({left: $('#main_case').position().left+$('#main_case').width()-5});
 					if (sublist2.children().length==0) {
 						sublist2.addClass('hidden');
 					} else {
-						sublist2.removeClass('hidden').css({left: sublist.position().left+sublist.width()});
+						sublist2.removeClass('hidden').css({left: sublist.position().left+sublist.width()-5});
 					}
 					var top=$(this).position().top;
 					if (top+sublist.height() > $('#showcase').height()) top = $('#showcase').height() - sublist.height() - 20;
 					if (top < 20) top=20;
 					sublist.css({top: top});
+					if (!$('#showcase .showcase_details').hasClass('hidden')) {
+						window.sto3=setTimeout(function(){
+							$('#showcase .showcase_details').fadeOut(200, function(){$(this).addClass('hidden');});
+						}, 1000);
+					}
 				}, function(){
-					var that=this;
-					$('.indicator', this).removeClass('indicator_wht');
-					window.sto=setTimeout(function(){
-						if ($('#main_case').find('a.current').length==0) {
-							$('#showcase').find('.subcaselist, .subcaselist2').addClass('hidden');
-							$('#showcase .showcase_details').addClass('hidden');
-							$(that).removeClass('current');
-							$('#showcase .bg').fadeTo(200, 1.0);
+					//$(this).removeClass('current');
+					window.sto=window.setTimeout(function(){
+						var mainlisthovers=$('#main_case').find('a:hover').length;
+						var sublisthovers=$('#showcase').find('.subcaselist, .subcaselist2').find('a:hover').length;
+						if (mainlisthovers == 0 && sublisthovers == 0) {
+							reset();
 						}
 					}, 1000);
 				});
