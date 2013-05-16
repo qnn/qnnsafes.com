@@ -4,9 +4,9 @@ more_scripts: ["scripts/jquery.lazyload-1.8.4.min.js"]
 ---
 		<div class="twocols">
 			<div id="leftprolist" class="twocols_left propanel">
-				<h2>Products</h2>
-				<ul>{% capture current_category %}{{ page.url | replace_first:'/products/','' | replace:'index.html','' | remove:'/' }}{% endcapture %}{% for category in site.categories_for_products %}{% capture cat %}{{ category[0] }}{% endcapture %}{% for post in site.categories[cat] limit:1 %}
-					<li><a{% if cat == current_category %} class="current"{% capture current_category_name %}{{ category[1] }}{% endcapture %}{% endif %} href="{{ post.url }}">{{ category[1] }}</a></li>{% endfor %}{% endfor %}
+				<h2 class="clicktotop">Products</h2>
+				<ul>{% capture current_category %}{{ page.url | replace_first:'/products/','' | replace:'index.html','' | remove:'/' }}{% endcapture %}{% for category in site.categories_for_products %}{% capture cat %}{{ category[0] }}{% endcapture %}
+					<li><a{% if cat == current_category %} class="current"{% capture current_category_name %}{{ category[1] }}{% endcapture %}{% endif %} data-category="{{ category[0] }}" href="#{{ category[0] }}">{{ category[1] }}</a></li>{% endfor %}
 				</ul>
 			</div>
 			<div class="twocols_right">
@@ -27,6 +27,7 @@ more_scripts: ["scripts/jquery.lazyload-1.8.4.min.js"]
 					Location: <a href="/">Home</a> &raquo; <a href="/products/">Products</a>
 				</p>
 				<div class="productlist">{% for category in site.categories_for_products %}{% capture cat %}{{ category[0] }}{% endcapture %}
+					<a class="anchors" name="{{ category[0] }}"></a>
 					<h3>{{ category[1] }}</h3>
 					<div class="prodsublist">{% for post in site.categories[cat] %}
 						<div class="psli"><a href="{{ post.url }}"><img class="lazy" data-original="{{ site.image_cdn }}{{ post.images[0] | filename_prepend:'150px/' }}" src="/images/white.gif" />{{ post.name }}</a></div>{% endfor %}
