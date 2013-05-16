@@ -4,6 +4,10 @@ By: caiguanhao <caiguanhao@gmail.com>. (c) 2013 All rights reserved.
 License: https://raw.github.com/qnn/qnnsafes.com/master/LICENSE
 Powered by Jekyll, the blog-aware, static site generator in Ruby.{% if page.url == '/index.html' %}
 Generated on {{ site.time }}.{% endif %}
+
+Source of this website can be found on GitHub:
+* https://github.com/qnn/qnnsafes.com{% if page.location %}/blob/master{{ page.location }}
+* https://raw.github.com/qnn/qnnsafes.com/master{{ page.location }}{% endif %}
 -->
 <html>
 {% capture lvl %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}{% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}{%capture page_title %}
