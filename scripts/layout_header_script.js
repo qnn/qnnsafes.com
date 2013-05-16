@@ -89,6 +89,10 @@ $(function(){
 					} else {
 						sublist2.removeClass('hidden').css({left: sublist.position().left+sublist.width()});
 					}
+					var top=$(this).position().top;
+					if (top+sublist.height() > $('#showcase').height()) top = $('#showcase').height() - sublist.height() - 20;
+					if (top < 20) top=20;
+					sublist.css({top: top});
 				}, function(){
 					$('#showcase').find('.subcaselist, .subcaselist2').addClass('hidden');
 					$('.indicator', this).removeClass('indicator_wht');
