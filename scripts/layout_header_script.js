@@ -69,8 +69,13 @@ $(function(){
 		$.getJSON('/products/catelog.json', function(CAT){
 			window.CAT = CAT;
 			$('#main_case a').each(function(){
-				$(this).hover(function(){
+				$(this).hoverIntent(function(){
+					clearTimeout(window.sto);
+					window.sto=undefined;
+					clearTimeout(window.ssto);
+					window.ssto=undefined;
 					$('#main_case a').removeClass('current');
+					$(this).addClass('current');
 					$('#showcase .showcase_details').addClass('hidden');
 					$('.indicator', this).addClass('indicator_wht');
 					var cat=$(this).data('category');
@@ -83,16 +88,22 @@ $(function(){
 						} else if (i>27) {
 							break;
 						}
-						$('<li />').append($('<a class="sd" data-image="'+CAT[cat][i].image+'" href="'+CAT[cat][i].link+'">'+CAT[cat][i].name+'</a>').hover(function(){
+						$('<li />').append($('<a class="sd" data-image="'+CAT[cat][i].image+'" href="'+CAT[cat][i].link+'">'+CAT[cat][i].name+'</a>').hoverIntent(function(){
+							clearTimeout(window.ssto);
+							window.ssto=undefined;
+							$(this).addClass('current');
 							$('#showcase').find('.subcaselist, .subcaselist2').removeClass('hidden');
-							$('#main_case a').removeClass('current');
 							var fpar=$('#main_case a[data-category="'+$(this).parents('.showcase_list').attr('data-belongsto')+'"]');
-							fpar.addClass('current');
 							$('#showcase .showcase_details').empty().append('<a href="'+$(this).attr('href')+'"><img src="{{ site.image_cdn }}'+$(this).data('image')+'" /></a><h3>'+fpar.text()+'<br />'+$(this).text()+'</h3>').removeClass('hidden');
 						}, function(){
-							$('#main_case a').removeClass('current');
-							$('#showcase').find('.subcaselist, .subcaselist2').addClass('hidden');
-							$('#showcase .showcase_details').addClass('hidden');
+							$(this).removeClass('current');
+							window.ssto=setTimeout(function(){
+								if ($('#showcase').find('.subcaselist a.current, .subcaselist2 a.current').length==0) {
+									$('#main_case a').removeClass('current');
+									$('#showcase').find('.subcaselist, .subcaselist2').addClass('hidden');
+									$('#showcase .showcase_details').addClass('hidden');
+								}
+							}, 1000);
 						})).appendTo(
 							i<14 ? sublist : sublist2
 						);
@@ -108,8 +119,15 @@ $(function(){
 					if (top < 20) top=20;
 					sublist.css({top: top});
 				}, function(){
-					$('#showcase').find('.subcaselist, .subcaselist2').addClass('hidden');
+					var that=this;
 					$('.indicator', this).removeClass('indicator_wht');
+					window.sto=setTimeout(function(){
+						if ($('#main_case').find('a.current').length==0) {
+							$('#showcase').find('.subcaselist, .subcaselist2').addClass('hidden');
+							$('#showcase .showcase_details').addClass('hidden');
+							$(that).removeClass('current');
+						}
+					}, 1000);
 				});
 				$(this).append('<div class="indicator"></div>');
 			});
@@ -154,3 +172,5 @@ $(_8HTML_.fixfooter);
 /* totop */
 (function(a){a.fn.UItoTop=function(e){var b=a.extend({text:"To Top",min:200,inDelay:600,outDelay:400,containerID:"toTop",containerHoverID:"toTopHover",scrollSpeed:1200,easingType:"linear"},e),d="#"+b.containerID,c="#"+b.containerHoverID;a("body").append($('<a href="javascript:;" id="'+b.containerID+'">'+b.text+'</a>').click(function(){window.scrollTo(0, 0);}));a(d).hide().on("click.UItoTop",function(){a("html, body").animate({scrollTop:0},b.scrollSpeed,b.easingType);a("#"+b.containerHoverID,this).stop().animate({opacity:0},b.inDelay,b.easingType);return!1}).prepend('<span id="'+
 b.containerHoverID+'"></span>').hover(function(){a(c,this).stop().animate({opacity:1},600,"linear")},function(){a(c,this).stop().animate({opacity:0},700,"linear")});a(window).scroll(function(){var c=a(window).scrollTop();"undefined"===typeof document.body.style.maxHeight&&a(d).css({position:"absolute",top:c+a(window).height()-50});c>b.min?a(d).fadeIn(b.inDelay):a(d).fadeOut(b.Outdelay)})}})(jQuery);
+/* hoverIntent r7 */
+(function(e){e.fn.hoverIntent=function(t,n,r){var i={interval:100,sensitivity:7,timeout:0};if(typeof t==="object"){i=e.extend(i,t)}else if(e.isFunction(n)){i=e.extend(i,{over:t,out:n,selector:r})}else{i=e.extend(i,{over:t,out:t,selector:n})}var s,o,u,a;var f=function(e){s=e.pageX;o=e.pageY};var l=function(t,n){n.hoverIntent_t=clearTimeout(n.hoverIntent_t);if(Math.abs(u-s)+Math.abs(a-o)<i.sensitivity){e(n).off("mousemove.hoverIntent",f);n.hoverIntent_s=1;return i.over.apply(n,[t])}else{u=s;a=o;n.hoverIntent_t=setTimeout(function(){l(t,n)},i.interval)}};var c=function(e,t){t.hoverIntent_t=clearTimeout(t.hoverIntent_t);t.hoverIntent_s=0;return i.out.apply(t,[e])};var h=function(t){var n=jQuery.extend({},t);var r=this;if(r.hoverIntent_t){r.hoverIntent_t=clearTimeout(r.hoverIntent_t)}if(t.type=="mouseenter"){u=n.pageX;a=n.pageY;e(r).on("mousemove.hoverIntent",f);if(r.hoverIntent_s!=1){r.hoverIntent_t=setTimeout(function(){l(n,r)},i.interval)}}else{e(r).off("mousemove.hoverIntent",f);if(r.hoverIntent_s==1){r.hoverIntent_t=setTimeout(function(){c(n,r)},i.timeout)}}};return this.on({"mouseenter.hoverIntent":h,"mouseleave.hoverIntent":h},i.selector)}})(jQuery)
