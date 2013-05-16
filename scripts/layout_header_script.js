@@ -116,7 +116,7 @@ $(function(){
 		});
 	}
 	if ($('.anchors').length>0) {
-		$('.clicktotop').bind('click',function(){window.location.hash='';});
+		$('.clicktotop').bind('click',function(){window.location.hash='';window.scrollTo(0, 0);});
 		$(document).bind('ready scroll',function() {
 			var anchors=$('.anchors'), i, top=f_scrollTop();
 			$('#leftprolist a').removeClass('current');
