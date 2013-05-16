@@ -66,13 +66,19 @@ color: #ed3237;
 .showcase {
 width: 1000px;
 height: 400px;
-background: url(../images/middlebg.jpg) no-repeat 0 0;
 overflow: hidden;
 position: relative;
+background: #000;
 }
-.showcase img {
+.showcase .bg {
 width: 1000px;
 height: 400px;
+overflow: hidden;
+background: url(../images/middlebg.jpg) no-repeat 0 0;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
 }
 .showcase_list {
 width: 228px;
@@ -81,6 +87,7 @@ box-shadow: 0 0 10px #333;
 position: absolute;
 top: 20px;
 left: 20px;
+z-index: 2;
 }
 .showcase_list li {
 height: 26px;
@@ -134,6 +141,7 @@ text-align: center;
 opacity: 0.95;
 overflow: hidden;
 width: 240px;
+z-index: 3;
 }
 .divide {
 margin: 8px 0;

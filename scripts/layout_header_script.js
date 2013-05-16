@@ -70,6 +70,7 @@ $(function(){
 			window.CAT = CAT;
 			$('#main_case a').each(function(){
 				$(this).hoverIntent(function(){
+					$('#showcase .bg').fadeTo(100, 0.5);
 					clearTimeout(window.sto);
 					window.sto=undefined;
 					clearTimeout(window.ssto);
@@ -102,6 +103,7 @@ $(function(){
 									$('#main_case a').removeClass('current');
 									$('#showcase').find('.subcaselist, .subcaselist2').addClass('hidden');
 									$('#showcase .showcase_details').addClass('hidden');
+									$('#showcase .bg').fadeTo(100, 1.0);
 								}
 							}, 1000);
 						})).appendTo(
@@ -126,6 +128,7 @@ $(function(){
 							$('#showcase').find('.subcaselist, .subcaselist2').addClass('hidden');
 							$('#showcase .showcase_details').addClass('hidden');
 							$(that).removeClass('current');
+							$('#showcase .bg').fadeTo(200, 1.0);
 						}
 					}, 1000);
 				});
