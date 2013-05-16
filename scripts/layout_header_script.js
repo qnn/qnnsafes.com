@@ -83,6 +83,7 @@ $(function(){
 					$('.indicator', this).addClass('indicator_wht');
 				});
 				$(this).hoverIntent(function(){
+					$('#showcase').css({'background-color':'#000'});
 					$('#showcase .bg').fadeTo(200, 0.5);
 					$('#main_case a').removeClass('current');
 					window.clearTimeout(window.sto);
