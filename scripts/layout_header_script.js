@@ -1,3 +1,6 @@
+---
+layout: nil
+---
 var relative = null;
 if (location.protocol==='file:') {
 	relative = Array($('link[rel="canonical"]').attr('href').match(/\//g).length-2).join('../');
@@ -48,6 +51,47 @@ $(function(){
 		$(".maincontent div.mc").hide();
 		$(".maincontent div").eq(a).show()
 	});
+	if ($("#main_case").length == 1) {
+		$.getJSON('/products/catelog.json', function(CAT){
+			window.CAT = CAT;
+			$('#main_case a').each(function(){
+				$(this).hover(function(){
+					$('#main_case a').removeClass('current');
+					$('#showcase .showcase_details').addClass('hidden');
+					$('.indicator', this).addClass('indicator_wht');
+					var cat=$(this).data('category');
+					var sublist=$('#showcase .subcaselist'), sublist2=$('#showcase .subcaselist2'), i;
+					sublist.attr('data-belongsto', cat).empty();
+					sublist2.attr('data-belongsto', cat).empty();
+					for (i=0; i<CAT[cat].length; i++) {
+						$('<li />').append($('<a class="sd" data-image="'+CAT[cat][i].image+'" href="'+CAT[cat][i].link+'">'+CAT[cat][i].name+'</a>').hover(function(){
+							$('#showcase').find('.subcaselist, .subcaselist2').removeClass('hidden');
+							$('#main_case a').removeClass('current');
+							var fpar=$('#main_case a[data-category="'+$(this).parents('.showcase_list').attr('data-belongsto')+'"]');
+							fpar.addClass('current');
+							$('#showcase .showcase_details').empty().append('<a href="'+$(this).attr('href')+'"><img src="{{ site.image_cdn }}'+$(this).data('image')+'" /></a><h3>'+fpar.text()+'<br />'+$(this).text()+'</h3>').removeClass('hidden');
+						}, function(){
+							$('#main_case a').removeClass('current');
+							$('#showcase').find('.subcaselist, .subcaselist2').addClass('hidden');
+							$('#showcase .showcase_details').addClass('hidden');
+						})).appendTo(
+							i<14 ? sublist : sublist2
+						);
+					}
+					sublist.removeClass('hidden').css({left: $('#main_case').position().left+$('#main_case').width()});
+					if (sublist2.children().length==0) {
+						sublist2.addClass('hidden');
+					} else {
+						sublist2.removeClass('hidden').css({left: sublist.position().left+sublist.width()});
+					}
+				}, function(){
+					$('#showcase').find('.subcaselist, .subcaselist2').addClass('hidden');
+					$('.indicator', this).removeClass('indicator_wht');
+				});
+				$(this).append('<div class="indicator"></div>');
+			});
+		});
+	}
 });
 /* totop */
 jQuery.extend(jQuery.easing,{easeOutQuart:function(e,a,b,c,d){return-c*((a=a/d-1)*a*a*a-1)+b}});

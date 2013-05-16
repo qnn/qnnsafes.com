@@ -2,8 +2,13 @@
 layout: default
 permalink: /index.html
 ---
-		<div class="showcase">
-			<img src="/images/middlebg.jpg" />
+		<div id="showcase" class="showcase">
+			<ul id="main_case" class="showcase_list">{% for category in site.categories_for_products %}{% capture cat %}{{ category[0] }}{% endcapture %}{% for post in site.categories[cat] limit:1 %}
+				<li><a{% if cat == current_category %} class="current"{% capture current_category_name %}{{ category[1] }}{% endcapture %}{% endif %} href="{{ post.url }}" data-category="{{ category[0] }}">{{ category[1] }}</a></li>{% endfor %}{% endfor %}
+			</ul>
+			<ul class="showcase_list subcaselist hidden"></ul>
+			<ul class="showcase_list subcaselist2 hidden"></ul>
+			<div class="showcase_details hidden"></div>
 		</div>
 		<div class="divide">
 			<div class="divide_item">
