@@ -447,6 +447,17 @@ font-size: 14px;
 color: #ED3237;
 text-decoration: underline;
 }
+.wcontent .context ul, .wcontent .context ol {
+margin: 0 20px;
+}
+.wcontent .context ul li, .wcontent .context ol li {
+font-size: 14px;
+line-height: 25px;
+}
+.mapcontainer {
+float: right;
+margin: 20px 0 20px 20px;
+}
 /* totop */
 #toTop {
 display:none;
