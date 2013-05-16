@@ -64,6 +64,11 @@ $(function(){
 					sublist.attr('data-belongsto', cat).empty();
 					sublist2.attr('data-belongsto', cat).empty();
 					for (i=0; i<CAT[cat].length; i++) {
+						if (i==27) {
+							CAT[cat][i].name="More...";
+						} else if (i>27) {
+							break;
+						}
 						$('<li />').append($('<a class="sd" data-image="'+CAT[cat][i].image+'" href="'+CAT[cat][i].link+'">'+CAT[cat][i].name+'</a>').hover(function(){
 							$('#showcase').find('.subcaselist, .subcaselist2').removeClass('hidden');
 							$('#main_case a').removeClass('current');
