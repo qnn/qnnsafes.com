@@ -7,12 +7,32 @@ Generated on {{ site.time }}.{% endif %}
 -->
 <html>
 {% capture lvl %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}{% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}{%capture page_title %}
-{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}
+{% if page.path contains '/_posts/' %}
+	{% if page.title %}{{ page.title }} - {% endif %}
+	{% for category in site.categories_for_products %}
+		{% capture cat %}{{ category[0] }}{% endcapture %}
+		{% if cat == page.category %}
+			{{ category[1] }} - 
+		{% endif %}
+	{% endfor %}
+{% else %}
+	{% if page.url contains '/products/' %}
+		{% capture current_category %}{{ page.url | replace_first:'/products/','' | replace:'index.html','' | remove:'/' }}{% endcapture %}
+		{% for category in site.categories_for_products %}
+			{% if current_category == category[0] %}
+				{{ category[1] }} - 
+			{% endif %}
+		{% endfor %}
+		Products - 
+	{% endif %}
+	{% if page.title %}{{ page.title }} - {% endif %}
+{% endif %}
+{{ site.title }}
 {% endcapture %}
 <head>
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}{% if page.tags %},{{ page.tags | join:',' }}{% endif %}" />
+<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}" />
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 <meta name="apple-mobile-web-app-title" content="{{ site.name }}" />
 <meta name="viewport" content="width=1024" />
