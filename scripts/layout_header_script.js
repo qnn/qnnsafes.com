@@ -161,6 +161,7 @@ $(function(){
 			}
 		});
 	}
+	$('.clicktolist').click(function(){location.href='/products/';});
 });
 function f_scrollTop() {
 	return f_filterResults (

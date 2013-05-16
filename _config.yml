@@ -17,17 +17,17 @@ markdown: rdiscount
 permalink: :categories/:title.html
 
 categories_for_products: [
-  ["hotel-safes",              "Hotel Safes"],
-  ["gun-safes",                "Gun Safes"],
-  ["commercial-safes",         "Commercial Safes"],
-  ["fireproof-safes",          "Fireproof Safes"],
-  ["filing-cabinet-safes",     "Filing Cabinet Safes"],
   ["burglary-and-fire-safes",  "Burglary and Fire Safes"],
-  ["lockers",                  "Lockers"],
-  ["wall-safes",               "Wall Safes"],
-  ["floor-safes",              "Floor Safes"],
+  ["commercial-safes",         "Commercial Safes"],
   ["depository-safes",         "Depository Safes"],
+  ["filing-cabinet-safes",     "Filing Cabinet Safes"],
   ["fingerprint-safes",        "Fingerprint Safes"],
+  ["fireproof-safes",          "Fireproof Safes"],
+  ["floor-safes",              "Floor Safes"],
+  ["gun-safes",                "Gun Safes"],
   ["home-or-office-safes",     "Home or Office Safes"],
+  ["hotel-safes",              "Hotel Safes"],
+  ["lockers",                  "Lockers"],
   ["new-safes",                "New Safes"],
+  ["wall-safes",               "Wall Safes"],
 ]
