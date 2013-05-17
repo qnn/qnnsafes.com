@@ -154,6 +154,10 @@ $(function(){
 			var anchors=$('.anchors'), i, top=f_scrollTop();
 			$('#leftprolist a').removeClass('current');
 			if (top < 120) return;
+			if (f_clientHeight() + f_scrollTop() == _8HTML_.getDocHeight()) {
+				$('#leftprolist a[data-category]:last').addClass('current');
+				return;
+			}
 			for (i=0; i<anchors.length; i++) {
 				var t1=anchors.eq(i).position()?anchors.eq(i).position().top:0;
 				var t2=anchors.eq(i+1).position()?anchors.eq(i+1).position().top:_8HTML_.getDocHeight();
@@ -172,6 +176,13 @@ function f_scrollTop() {
 		window.pageYOffset ? window.pageYOffset : 0,
 		document.documentElement ? document.documentElement.scrollTop : 0,
 		document.body ? document.body.scrollTop : 0
+	);
+}
+function f_clientHeight() {
+	return f_filterResults (
+		window.innerHeight ? window.innerHeight : 0,
+		document.documentElement ? document.documentElement.clientHeight : 0,
+		document.body ? document.body.clientHeight : 0
 	);
 }
 function f_filterResults(n_win, n_docel, n_body) {
