@@ -78,6 +78,9 @@ $(function(){
 			};
 			$('#main_case a').each(function(){
 				window.CASE[$(this).data('category')]=$(this).text();
+				$(this).click(function(){
+					return false;
+				});
 				$(this).hover(function(){
 					$('#main_case .indicator').removeClass('indicator_wht');
 					$('.indicator', this).addClass('indicator_wht');

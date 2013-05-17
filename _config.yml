@@ -14,7 +14,7 @@ exclude: ['README.md', 'LICENSE']
 
 markdown: rdiscount
 
-permalink: :categories/:title.html
+permalink: /products/:title.html
 
 categories_for_products: [
   ["burglary-and-fire-safes",  "Burglary and Fire Safes"],
