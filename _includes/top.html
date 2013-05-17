@@ -36,11 +36,11 @@ Source of this website can be found on GitHub:
 <head>
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<title>{{ page_title | strip_newlines | remove:'	' }}</title>
 <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}" />
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 <meta name="apple-mobile-web-app-title" content="{{ site.name }}" />
 <meta name="viewport" content="width=1024" />
-<title>{{ page_title | strip_newlines | remove:'	' }}</title>
 <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
 <link href="{{ relative }}css/layout_stylesheets.css" rel="stylesheet" />{% for item in page.more_css %}
 <link href="{{ item | prepend_relative:relative }}" rel="stylesheet" />{% endfor %}
