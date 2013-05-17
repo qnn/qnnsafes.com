@@ -164,6 +164,9 @@ height: 170px;
 margin: 0 0 0 14px;
 width: 230px;
 }
+* html .divide {
+margin-left: -14px;
+}
 .divide_item img {
 display: block;
 width: 200px;
@@ -243,6 +246,7 @@ border-top: 1px solid #ECECEC;
 .twocols_left {
 float:left;
 border-right: 1px solid #ECECEC;
+border-bottom: 1px solid #ECECEC;
 width: 230px;
 margin: 0 8px 0 0;
 }
