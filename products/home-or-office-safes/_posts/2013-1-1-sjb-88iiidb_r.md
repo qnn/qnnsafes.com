@@ -8,8 +8,8 @@ category: home-or-office-safes
 name: SJB-88IIIDB/R
 
 images: [
-  "/prodimgs/sjb-88iiidb_r-1.jpg",
-  "/prodimgs/sjb-88iiidb_r-2.jpg",
+  "sjb-88iiidb_r-1.jpg",
+  "sjb-88iiidb_r-2.jpg",
 ]
 
 info: |

@@ -8,8 +8,8 @@ category: hotel-safes
 name: CEU & Printer
 
 images: [
-  "/prodimgs/ceu_printer-1.jpg",
-  "/prodimgs/ceu_printer-2.jpg",
+  "ceu_printer-1.jpg",
+  "ceu_printer-2.jpg",
 ]
 
 info: |

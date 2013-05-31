@@ -8,8 +8,8 @@ category: home-or-office-safes
 name: SJB-40HIIIB/R
 
 images: [
-  "/prodimgs/sjb-40hiiib_r-1.jpg",
-  "/prodimgs/sjb-40hiiib_r-2.jpg",
+  "sjb-40hiiib_r-1.jpg",
+  "sjb-40hiiib_r-2.jpg",
 ]
 
 info: |
