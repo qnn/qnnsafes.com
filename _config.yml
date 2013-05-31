@@ -16,20 +16,32 @@ markdown: rdiscount
 
 permalink: /products/:title.html
 
-categories_for_products: [
-  ["burglary-and-fire-safes",  "Burglary and Fire Safes"],
-  ["commercial-safes",         "Commercial Safes"],
-  ["depository-safes",         "Depository Safes"],
-  ["filing-cabinet-safes",     "Filing Cabinet Safes"],
-  ["fingerprint-safes",        "Fingerprint Safes"],
-  ["fireproof-safes",          "Fireproof Safes"],
-  ["floor-safes",              "Floor Safes"],
-  ["gun-safes",                "Gun Safes"],
-  ["home-or-office-safes",     "Home or Office Safes"],
-  ["hotel-safes",              "Hotel Safes"],
-  ["lockers",                  "Lockers"],
-  ["new-safes",                "New Safes"],
-  ["wall-safes",               "Wall Safes"],
-]
+categories_for_products:
+  - - burglary-and-fire-safes
+    - Burglary and Fire Safes
+  - - commercial-safes
+    - Commercial Safes
+  - - depository-safes
+    - Depository Safes
+  - - filing-cabinet-safes
+    - Filing Cabinet Safes
+  - - fingerprint-safes
+    - Fingerprint Safes
+  - - fireproof-safes
+    - Fireproof Safes
+  - - floor-safes
+    - Floor Safes
+  - - gun-safes
+    - Gun Safes
+  - - home-or-office-safes
+    - Home or Office Safes
+  - - hotel-safes
+    - Hotel Safes
+  - - lockers
+    - Lockers
+  - - new-safes
+    - New Safes
+  - - wall-safes
+    - Wall Safes
 
 relative_permalinks: false
