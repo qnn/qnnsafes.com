@@ -20,14 +20,14 @@ more_scripts: ["scripts/jquery-etalage-1.3.1.min.js"]
 {{ page.info | markdownify | indent:7 | remove:'</ul>' | remove:'<ul>' }}
 							<li>
 								<div class="clear">All Models:</div>{% for post in site.categories[page.category] reversed %}
-								<a class="otherq{% if post.name == page.name %} otherqcur{% endif %}" href="{{ post.url }}" title="{{ post.name }}"><img src="{{ site.image_cdn }}{{ post.images[0] | filename_prepend:'150px/' }}" /><br />{{ post.name }}</a>{% endfor %}
+								<a class="otherq{% if post.name == page.name %} otherqcur{% endif %}" href="{{ post.url }}" title="{{ post.name }}"><img src="{{ site.image_cdn }}/150px/{{ post.images[0] }}" /><br />{{ post.name }}</a>{% endfor %}
 								<div class="clear"></div>
 							</li>
 						</ul>
 					</div>
 					<div class="lfp">
 						<ul id="etalage">{% for image in page.images %}
-							<li><img class="etalage_source_image" src="{{ site.image_cdn }}{{ image }}" /></li>{% endfor %}
+							<li><img class="etalage_source_image" src="{{ site.image_cdn }}/{{ image }}" /></li>{% endfor %}
 						</ul>
 					</div>
 					<div class="clear"></div>

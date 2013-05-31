@@ -8,7 +8,7 @@ description: QNNSafe
 
 keywords: QNNSafe
 
-image_cdn: http://test.html9.com
+image_cdn: http://test.html9.com/products_alt
 
 exclude: ['README.md', 'LICENSE']
 
@@ -31,3 +31,5 @@ categories_for_products: [
   ["new-safes",                "New Safes"],
   ["wall-safes",               "Wall Safes"],
 ]
+
+relative_permalinks: false

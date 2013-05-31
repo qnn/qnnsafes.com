@@ -110,7 +110,7 @@ $(function(){
 							window.clearTimeout(window.sto);
 							window.clearTimeout(window.sto2);
 							window.clearTimeout(window.sto3);
-							$('#showcase .showcase_details').empty().append('<a href="'+$(this).attr('href')+'"><img src="{{ site.image_cdn }}'+$(this).data('image')+'" /></a><h3>'+window.CASE[cat]+'<br />'+$(this).text()+'</h3>');
+							$('#showcase .showcase_details').empty().append('<a href="'+$(this).attr('href')+'"><img src="{{ site.image_cdn }}/'+$(this).data('image')+'" /></a><h3>'+window.CASE[cat]+'<br />'+$(this).text()+'</h3>');
 							if ($('#showcase .showcase_details').hasClass('hidden')) {
 								$('#showcase .showcase_details').removeClass('hidden').hide().fadeIn(200);
 							}
