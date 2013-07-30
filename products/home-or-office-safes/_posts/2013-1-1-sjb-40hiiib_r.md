@@ -5,6 +5,8 @@ title: SJB-40HIIIB/R
 
 category: home-or-office-safes
 
+series: SJB
+
 name: SJB-40HIIIB/R
 
 images: [

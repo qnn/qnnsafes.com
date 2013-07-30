@@ -5,6 +5,8 @@ title: CEU & Printer
 
 category: hotel-safes
 
+series: CEU & Printer
+
 name: CEU & Printer
 
 images: [

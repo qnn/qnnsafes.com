@@ -5,6 +5,8 @@ title: SJB-88IIIDB/R
 
 category: home-or-office-safes
 
+series: SJB
+
 name: SJB-88IIIDB/R
 
 images: [
