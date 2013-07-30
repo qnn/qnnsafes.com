@@ -65,89 +65,6 @@ $(function(){
 	$(window).bind('resize',function(){
 		if ($('#leftprolist').hasClass('fixed')) $('#leftprolist').css({left:$('#header').position().left-document.body.scrollLeft});
 	});
-	if ($("#main_case").length == 1) {
-		$.getJSON('/products/catelog.json', function(CAT){
-			window.CAT = CAT;
-			window.CASE = {};
-			var reset=function(){
-				$('#showcase').find('.subcaselist, .subcaselist2').addClass('hidden');
-				$('#showcase .showcase_details').fadeOut(200, function(){$(this).addClass('hidden');});
-				$('#showcase .bg').fadeTo(200, 1.0);
-				$('#main_case a').removeClass('current');
-				$('#main_case .indicator').removeClass('indicator_wht');
-			};
-			$('#main_case a').each(function(){
-				window.CASE[$(this).data('category')]=$(this).text();
-				$(this).click(function(){
-					return false;
-				});
-				$(this).hover(function(){
-					$('#main_case .indicator').removeClass('indicator_wht');
-					$('.indicator', this).addClass('indicator_wht');
-				});
-				$(this).hoverIntent(function(){
-					$('#showcase').css({'background-color':'#000'});
-					$('#showcase .bg').fadeTo(200, 0.5);
-					$('#main_case a').removeClass('current');
-					window.clearTimeout(window.sto);
-					window.clearTimeout(window.sto2);
-					window.clearTimeout(window.sto3);
-					var sublist=$('#showcase .subcaselist'), sublist2=$('#showcase .subcaselist2');
-					var cat=$(this).data('category');
-					sublist.empty();
-					sublist2.empty();
-					for (i=0; i<CAT[cat].length; i++) {
-						if (i==27) {
-							CAT[cat][i].name="More...";
-						} else if (i>27) {
-							break;
-						}
-						var alink=$('<a class="sd" data-image="'+CAT[cat][i].image+'" href="'+CAT[cat][i].link+'">'+CAT[cat][i].name+'</a>');
-						alink.hover(function(){
-							$('#main_case a[data-category="'+cat+'"]').addClass('current');
-						});
-						alink.hoverIntent(function(){
-							window.clearTimeout(window.sto);
-							window.clearTimeout(window.sto2);
-							window.clearTimeout(window.sto3);
-							$('#showcase .showcase_details').empty().append('<a href="'+$(this).attr('href')+'"><img src="{{ site.image_cdn }}/'+$(this).data('image')+'" /></a><h3>'+window.CASE[cat]+'<br />'+$(this).text()+'</h3>');
-							if ($('#showcase .showcase_details').hasClass('hidden')) {
-								$('#showcase .showcase_details').removeClass('hidden').hide().fadeIn(200);
-							}
-						}, function(){
-							window.sto2=window.setTimeout(reset, 1000);
-						});
-						$('<li />').append(alink).appendTo(i<14 ? sublist : sublist2);
-					}
-					sublist.removeClass('hidden').css({left: $('#main_case').position().left+$('#main_case').width()-5});
-					if (sublist2.children().length==0) {
-						sublist2.addClass('hidden');
-					} else {
-						sublist2.removeClass('hidden').css({left: sublist.position().left+sublist.width()-5});
-					}
-					var top=$(this).position().top;
-					if (top+sublist.height() > $('#showcase').height()) top = $('#showcase').height() - sublist.height() - 20;
-					if (top < 20) top=20;
-					sublist.css({top: top});
-					if (!$('#showcase .showcase_details').hasClass('hidden')) {
-						window.sto3=setTimeout(function(){
-							$('#showcase .showcase_details').fadeOut(200, function(){$(this).addClass('hidden');});
-						}, 1000);
-					}
-				}, function(){
-					//$(this).removeClass('current');
-					window.sto=window.setTimeout(function(){
-						var mainlisthovers=$('#main_case').find('a:hover').length;
-						var sublisthovers=$('#showcase').find('.subcaselist, .subcaselist2').find('a:hover').length;
-						if (mainlisthovers == 0 && sublisthovers == 0) {
-							reset();
-						}
-					}, 1000);
-				});
-				$(this).append('<div class="indicator"></div>');
-			});
-		});
-	}
 	if ($('.anchors').length>0) {
 		$('.clicktotop').bind('click',function(){window.location.hash='';window.scrollTo(0, 0);});
 		$(document).bind('ready scroll',function() {
@@ -170,6 +87,13 @@ $(function(){
 		});
 	}
 	$('.clicktolist').click(function(){location.href='/products/';});
+  
+  1 == $("#slider").length && $("#slider").sliderkit({
+      auto: !0,
+      circular: !0,
+      panelfx: "sliding",
+      autospeed: 5E3
+  });
 });
 function f_scrollTop() {
 	return f_filterResults (

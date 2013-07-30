@@ -1,16 +1,27 @@
 ---
 layout: default
 permalink: /index.html
+more_scripts:
+- scripts/jquery.sliderkit.1.9.2.min.js
 ---
-		<div id="showcase" class="showcase">
-			<div class="bg"></div>
-			<ul id="main_case" class="showcase_list">{% for category in site.categories_for_products %}{% capture cat %}{{ category[0] }}{% endcapture %}{% for post in site.categories[cat] %}{% if forloop.last %}
-				<li><a{% if cat == current_category %} class="current"{% capture current_category_name %}{{ category[1] }}{% endcapture %}{% endif %} href="{{ post.url }}" data-category="{{ category[0] }}">{{ category[1] }}</a></li>{% endif %}{% endfor %}{% endfor %}
-			</ul>
-			<ul class="showcase_list subcaselist hidden"></ul>
-			<ul class="showcase_list subcaselist2 hidden"></ul>
-			<div class="showcase_details hidden"></div>
-		</div>
+  	<div id="slider" class="sliderkit photoslider-bullets">
+  		<div class="sliderkit-nav">
+  			<div class="sliderkit-nav-clip">
+  				<ul>
+  					<li><a href="#"></a></li>
+  					<li><a href="#"></a></li>
+  				</ul>
+  			</div>
+  		</div>
+  		<div class="sliderkit-panels">
+        <div class="sliderkit-panel">
+  				<a href="#"><img alt="QNN Safe" src="/images/middlebg2.jpg" width="1000" height="300" /></a>
+  			</div>
+        <div class="sliderkit-panel">
+  				<a href="#"><img alt="QNN Safe" src="/images/middlebg.jpg" width="1000" height="300" /></a>
+  			</div>
+  		</div>
+  	</div>
 		<div class="divide">
 			<div class="divide_item">
 				<a href="/about/"><img src="/images/qnnimg.png" /><em>About Us</em></a>
