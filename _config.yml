@@ -10,7 +10,7 @@ keywords: QNNSafe
 
 image_cdn: http://test.html9.com/products_alt
 
-exclude: ['README.md', 'LICENSE']
+exclude: ['README.md', 'LICENSE', 'Rakefile']
 
 markdown: rdiscount
 
@@ -43,5 +43,21 @@ categories_for_products:
     - New Safes
   - - wall-safes
     - Wall Safes
+
+# use rake index to generate
+sub_categories:
+  "burglary-and-fire-safes": [["CS", "/products/cs-2018c.html"]]
+  "commercial-safes": [["AH", "/products/ah-1.html"], ["B", "/products/b-1414c.html"], ["RK", "/products/rk-25.html"]]
+  "depository-safes": [["DG", "/products/dg-6442ds.html"], ["F", "/products/f-2014c_k_e.html"], ["RH", "/products/rh-1612k_c.html"], ["US", "/products/us-1206k.html"]]
+  "filing-cabinet-safes": [["BMG", "/products/bmg-8001a_b.html"]]
+  "fingerprint-safes": [["ZF", "/products/zf-11860b_r.html"]]
+  "fireproof-safes": [["FPC", "/products/fpc-3040sc.html"]]
+  "floor-safes": [["IF", "/products/if-1212sc.html"]]
+  "gun-safes": [["FG", "/products/fg-153.html"]]
+  "home-or-office-safes": [["FG", "/products/fg-100b_r.html"], ["HG", "/products/hg-11860.html"], ["SJB", "/products/sjb-1630b_r.html"], ["TGG", "/products/tgg-2040b_r.html"]]
+  "hotel-safes": [["CEU & Printer", "/products/ceu_printer.html"], ["CK", "/products/ck01-2031.html"], ["CT", "/products/ct-1211h.html"], ["CX", "/products/cx-1625.html"], ["DM", "/products/dm-2046zh.html"], ["MA", "/products/ma-2043zh.html"], ["MB", "/products/mb-2043zh.html"], ["MC", "/products/mc-2043zh.html"], ["ME", "/products/me-2043zh.html"], ["MF", "/products/mf-2043zh.html"], ["MG", "/products/mg-2043zh.html"], ["MH", "/products/mh-2043zh.html"]]
+  "lockers": [["H", "/products/h-06.html"]]
+  "new-safes": [["A", "/products/a-2045.html"], ["AI", "/products/ai-5842.html"], ["B", "/products/b-4538.html"], ["BW", "/products/bw-6960.html"], ["DM", "/products/dm-2045.html"], ["GLF", "/products/glf3342.html"], ["GTX", "/products/gtx3342.html"], ["iBOX", "/products/ibox-2535.html"], ["ITG", "/products/itg-3342.html"], ["KL", "/products/kl-4045.html"], ["MK", "/products/mk-2045.html"], ["MQ", "/products/mq-2045.html"], ["QN", "/products/qn-2043zh.html"]]
+  "wall-safes": [["ES", "/products/es-2318w.html"], ["WS", "/products/ws-108.html"]]
 
 relative_permalinks: false

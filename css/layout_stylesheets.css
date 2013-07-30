@@ -223,6 +223,13 @@ background: #D71920 url(../images/indicator_wht.png) no-repeat 210px 11px;
 color: #fff;
 text-decoration: none;
 }
+.twocols_left ul li.sub a {
+padding-left: 40px;
+}
+.twocols_left ul li.sub a:hover, .twocols_left ul li.sub a.current {
+background: #FFD7D8 url(../images/indicator_wht.png) no-repeat 210px 11px;
+color: #000;
+}
 .twocols_right {
 float: right;
 width: 760px;
