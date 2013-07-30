@@ -3,7 +3,7 @@ layout: default
 more_scripts: ["scripts/jquery-etalage-1.3.1.min.js"]
 ---
 		<div class="twocols">
-			<div id="leftprolist" class="twocols_left propanel">
+			<div id="leftprolist_stable" class="twocols_left propanel">
 				<h2 class="clicktolist">Products</h2>
 				<ul>{% for category in site.categories_for_products %}{% capture cat %}{{ category[0] }}{% endcapture %}{% if cat == page.category %}{% capture current_category %}{{ category[0] }}{% endcapture %}{% capture current_category_name %}{{ category[1] }}{% endcapture %}{% endif %}{% for post in site.categories[cat] %}{% if forloop.last %}
 					<li><a{% if cat == page.category %} class="current"{% endif %} href="{{ post.url }}">{{ category[1] }}</a></li>{% if cat == page.category %}{% for sub in site.sub_categories[cat] %}
