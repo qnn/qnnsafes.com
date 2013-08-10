@@ -8,7 +8,7 @@ description: QNNSafe
 
 keywords: QNNSafe
 
-image_cdn: http://test.html9.com/products_alt
+image_cdn: http://en.qnnimg.com/products
 
 exclude: ['README.md', 'LICENSE', 'Rakefile']
 
