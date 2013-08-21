@@ -1,3 +1,24 @@
+trap("SIGINT") { exit! }
+
+task :default do
+  exec 'rake -T'
+end
+
+def puts_and_exec command
+  puts command
+  exec command
+end
+
+desc 'Build site (production)'
+task :build do
+  puts_and_exec 'jekyll build --config _config.yml --trace'
+end
+
+desc 'Preview and watch changes on local machine (development)'
+task :preview do
+  puts_and_exec 'jekyll serve --watch --trace'
+end
+
 def permalink file
   title = File.basename(file, '.md')
   title.sub!(/^\d+\-\d+\-\d+\-/, '')
