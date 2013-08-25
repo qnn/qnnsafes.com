@@ -49,3 +49,25 @@ task :index do
     puts "  \"#{k}\": #{v}"
   end
 end
+
+desc 'format the table that copies from spreadsheets'
+task :format do
+  spreadsheet_file = File.expand_path('../spreadsheets.data', __FILE__)
+  spreadsheet = IO.read(spreadsheet_file)
+  spreadsheet.gsub!("\t", '</td><td>')
+  puts '  <table class="table">'
+  spreadsheet.lines.each_with_index do |line, index|
+    line.strip!
+    if index == 0
+      line = line.gsub('td>', 'th>').gsub(/\s+/, ' ')
+      puts '    <thead class="table_head">'
+      puts "      <tr><th>#{line}</th></tr>"
+      puts '    </thead>'
+      puts '    <tbody class="table_body">'
+    else
+      puts "      <tr><td>#{line}</td></tr>"
+    end
+  end
+  puts '    </tbody>'
+  puts '  </table>'
+end
