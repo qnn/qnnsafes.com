@@ -60,10 +60,10 @@ task :format do
     line.strip!
     if index == 0
       line = line.gsub('td>', 'th>').gsub(/\s+/, ' ')
-      puts '    <thead class="table_head">'
+      puts '    <thead class="table-head">'
       puts "      <tr><th>#{line}</th></tr>"
       puts '    </thead>'
-      puts '    <tbody class="table_body">'
+      puts '    <tbody class="table-body">'
     else
       puts "      <tr><td>#{line}</td></tr>"
     end
