@@ -112,6 +112,7 @@ task :format_and_update do
       end
     end
   end
+  success = 0
   series.each do |product|
     n = product[:name]
     c = product[:file]
@@ -129,6 +130,11 @@ task :format_and_update do
       c.sub!(/specs:\s\|(.+?)\n\n/m, "specs: |\n#{specs}\n")
       File.open(n, 'w') { |file| file.write c }
       puts "Success: updated specs in #{n}."
+      success += 1
     end
+  end
+  model_len = content[:models].length
+  if success != model_len
+    puts "Warning: #{success} out of #{model_len} models updated specs."
   end
 end
