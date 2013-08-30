@@ -48,7 +48,7 @@ categories_for_products:
 # DO NOT EDIT, use rake update:index to update
 # sub_categories::START
 sub_categories:
-  "burglary-and-fire-safes": [["CS", "/products/cs-2018c.html"]]
+  "burglary-and-fire-safes": [["CS", "/products/cs-2018c_e.html"]]
   "commercial-safes": [["AH", "/products/ah-1.html"], ["B", "/products/b-1414c.html"], ["RK", "/products/rk-25.html"]]
   "depository-safes": [["DG", "/products/dg-6442ds.html"], ["F", "/products/f-2014c_k_e.html"], ["RH", "/products/rh-1612k_c.html"], ["US", "/products/us-1206k.html"]]
   "filing-cabinet-safes": [["BMG", "/products/bmg-7545a_b.html"]]
