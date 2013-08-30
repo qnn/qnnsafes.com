@@ -44,7 +44,9 @@ categories_for_products:
   - - wall-safes
     - Wall Safes
 
-# use rake index to generate
+
+# DO NOT EDIT, use rake update:index to update
+# sub_categories::START
 sub_categories:
   "burglary-and-fire-safes": [["CS", "/products/cs-2018c.html"]]
   "commercial-safes": [["AH", "/products/ah-1.html"], ["B", "/products/b-1414c.html"], ["RK", "/products/rk-25.html"]]
@@ -55,9 +57,12 @@ sub_categories:
   "floor-safes": [["IF", "/products/if-1212sc.html"]]
   "gun-safes": [["FG", "/products/fg-153.html"]]
   "home-or-office-safes": [["FG", "/products/fg-100b_r.html"], ["HG", "/products/hg-11860.html"], ["SJB", "/products/sjb-1630b_r.html"], ["TGG", "/products/tgg-2040b_r.html"]]
-  "hotel-safes": [["CEU & Printer", "/products/ceu_printer.html"], ["CK", "/products/ck01-2031.html"], ["CT", "/products/ct-1331.html"], ["CX", "/products/cx-1625.html"], ["DM", "/products/dm-2046zh.html"], ["MA", "/products/ma-2043zh.html"], ["MB", "/products/mb-2043zh.html"], ["MC", "/products/mc-2043zh.html"], ["ME", "/products/me-2043zh.html"], ["MF", "/products/mf-2043zh.html"], ["MG", "/products/mg-2043zh.html"], ["MH", "/products/mh-2043zh.html"]]
+  "hotel-safes": [["CEU & Printer", "/products/ceu_printer.html"], ["CK", "/products/ck01-2031.html"], ["CT", "/products/ct-1331.html"], ["CX", "/products/cx-1625.html"], ["DM", "/products/dm-185640.html"], ["MA", "/products/ma-2043zh.html"], ["MB", "/products/mb-2043zh.html"], ["MC", "/products/mc-2043zh.html"], ["ME", "/products/me-2043zh.html"], ["MF", "/products/mf-2043zh.html"], ["MG", "/products/mg-2043zh.html"], ["MH", "/products/mh-2043zh.html"]]
   "lockers": [["H", "/products/h-04.html"]]
-  "new-safes": [["A", "/products/a-2045.html"], ["AI", "/products/ai-5842.html"], ["B", "/products/b-4538.html"], ["BW", "/products/bw-6960.html"], ["DM", "/products/dm-2045.html"], ["GLF", "/products/glf3342.html"], ["GTX", "/products/gtx11860.html"], ["iBOX", "/products/ibox-2535.html"], ["ITG", "/products/itg-3342.html"], ["KL", "/products/kl-4045.html"], ["MK", "/products/mk-2045.html"], ["MQ", "/products/mq-2045.html"], ["QN", "/products/qn-2043zh.html"]]
+  "new-safes": [["A", "/products/a-2045.html"], ["AI", "/products/ai-5842.html"], ["B", "/products/b-4538.html"], ["BW", "/products/bw-6960.html"], ["GLF", "/products/glf3342.html"], ["GTX", "/products/gtx11860.html"], ["iBOX", "/products/ibox-2535.html"], ["ITG", "/products/itg-3342.html"], ["KL", "/products/kl-4045.html"], ["MK", "/products/mk-2045.html"], ["MQ", "/products/mq-2045.html"], ["QN", "/products/qn-2043zh.html"]]
   "wall-safes": [["ES", "/products/es-2318w.html"], ["WS", "/products/ws-108.html"]]
+# sub_categories::END
+# DO NOT EDIT, use rake update:index to update
+
 
 relative_permalinks: false

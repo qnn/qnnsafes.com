@@ -45,10 +45,20 @@ namespace :update do
       end
       index[cat] << [series, permalink(File.basename(file))] unless included
     end
-    puts "sub_categories:"
+    config = File.expand_path('../_config.yml', __FILE__)
+    file = IO.read(config)
+    start = "# sub_categories::START"
+    start = file.index(start) + start.length
+    finish = file.index("# sub_categories::END")
+    output = "#{file[0, start]}\nsub_categories:\n"
     index.each do |k,v|
-      puts "  \"#{k}\": #{v}"
+      output += "  \"#{k}\": #{v}\n"
     end
+    output += "#{file[finish..-1]}"
+    File.open(config, 'w') do |file|
+      file.write output
+    end
+    puts "Successfully updated _config.yml."
   end
 end
 
