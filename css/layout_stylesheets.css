@@ -633,3 +633,64 @@ table {
     border-right-color: #ccc; }
 .table-body > tr:last-child > td {
   border-bottom: 1px solid #c8c8c8; }
+
+#addinfo {
+  font-size: 13px;
+}
+
+#addinfo strong {
+  display: block;
+  font-size: 15px;
+  margin: 20px 0 8px;
+}
+
+#addinfo table {
+  margin: 10px 0;
+  border: 0;
+  border-spacing: 0;
+  background: white;
+  border-collapse: separate;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  font-size: 13px;
+}
+
+#addinfo table th {
+  line-height: 18px;
+  font-weight: bold;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  background: #ecf0f0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #c8c8c8;
+  border-left: 0;
+  border-right: 1px solid #ddd;
+  border-right-color: rgba(0, 0, 0, 0.12);
+  background-image: linear-gradient(tobottom, #f5fafa, #e7eaea);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 1px rgba(0, 0, 0, 0.04);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 1px rgba(0, 0, 0, 0.04);
+  padding: 3px 10px;
+}
+
+#addinfo table th:first-child {
+  border-left: 1px solid #ccc;
+}
+
+#addinfo table th:last-child {
+  border-right-color: #ccc;
+}
+
+#addinfo table td {
+  border: 0;
+  text-shadow: 0 1px white;
+  border-right: 1px solid #eee;
+  border-right-color: rgba(0, 0, 0, 0.08);
+  padding: 0 10px;
+}
+
+#addinfo table td:first-child {
+    border-left: 1px solid #ccc; }
+#addinfo table td:last-child {
+    border-right-color: #ccc; }
+#addinfo table tbody tr:first-child td {
+  border-top: 1px solid #c8c8c8; }
