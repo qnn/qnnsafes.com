@@ -14,7 +14,7 @@
       <td><img src="http://en.qnnimg.com/products-info/features-03.jpg" width="100" height="120" /></td>
       <td><img src="http://en.qnnimg.com/products-info/features-04.jpg" width="100" height="120" /></td>
       </tr>
-      <tr align="center" valign="middle"><th>Emergency Key</th><th>Battery</th><th>Screws</th><th>External Battery Box</th></tr>
+      <tr align="center" valign="middle"><th>Hopper</th><th>Big Capacity</th></tr>
   </table>
   
 **F.O.C. Spare parts**
