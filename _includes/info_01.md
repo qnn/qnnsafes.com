@@ -4,7 +4,7 @@
       <td><img src="http://en.qnnimg.com/products-info/foc-01.jpg" width="100" height="120" /></td>
       <td><img src="http://en.qnnimg.com/products-info/foc-02.jpg" width="100" height="120" /></td>
       <td><img src="http://en.qnnimg.com/products-info/foc-03.jpg" width="100" height="120" /></td>
-      <td><img src="http://en.qnnimg.com/products-info/foc-04.jpg" width="100" height="127" /></td>
+      <td><img src="http://en.qnnimg.com/products-info/foc-04.jpg" width="100" height="120" /></td>
       </tr>
       <tr align="center" valign="middle"><th>Emergency Key</th><th>Battery</th><th>Screws</th><th>External Battery Box</th></tr>
   </table>
