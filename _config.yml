@@ -50,7 +50,7 @@ categories_for_products:
 sub_categories:
   "burglary-and-fire-safes": [["CS", "/products/cs-2018c_e.html"]]
   "commercial-safes": [["AH", "/products/ah-1.html"], ["B", "/products/b-1414c.html"], ["RK", "/products/rk-25.html"]]
-  "depository-safes": [["DG", "/products/dg-6442ds.html"], ["F", "/products/f-1614cke.html"], ["RH", "/products/rh-1612c_k.html"], ["US", "/products/us-1206k.html"]]
+  "depository-safes": [["DG", "/products/dg-6442ds.html"], ["F", "/products/f-1614ck.html"], ["RH", "/products/rh-1612c_k.html"], ["US", "/products/us-1206k.html"]]
   "filing-cabinet-safes": [["BMG", "/products/bmg-7545a_b.html"]]
   "fingerprint-safes": [["ZF", "/products/zf-11860b_r.html"]]
   "fireproof-safes": [["FPC", "/products/fpc-3040sc.html"]]
