@@ -1,3 +1,18 @@
+**Additional Functions**
+
+The TGG series safe can be with GSM Burglar alamr device(optional).
+
+It can reserve 5 group phone number (suitable for mobile phone, telephone both)
+
+**Close-up Features**
+  <table width="500" border="1" cellspacing="1">
+      <tr align="center" valign="middle">
+      <td><img src="http://en.qnnimg.com/products-info/features-08.jpg" width="100" height="120" /></td>
+	  <td><img src="http://en.qnnimg.com/products-info/features-09.jpg" width="100" height="120" /></td>
+      </tr>
+      <tr align="center" valign="middle"><th>GSM Burglar alarm Device(Optinal)</th><th>Stealthy LED display</th></tr>
+  </table>
+
 **F.O.C. Spare parts**
   <table width="500" border="1" cellspacing="1">
       <tr align="center" valign="middle">
