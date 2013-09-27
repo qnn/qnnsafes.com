@@ -3,7 +3,7 @@
       <tr align="center" valign="middle">
       <td><img src="http://en.qnnimg.com/products-info/locks-03.jpg" width="100" height="120" /></td>
       </tr>
-      <tr align="center" valign="middle"><th>C=Combination lock</th><th>K=double heads keylock</th><th>E=factory digital lock</th></tr>
+      <tr align="center" valign="middle"><th>E=factory digital lock</th></tr>
   </table>
 
 **Close-up Features**
