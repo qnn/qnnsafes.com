@@ -94,6 +94,14 @@ $(function(){
       panelfx: "sliding",
       autospeed: 5E3
   });
+  if ($('#pano').length == 1) {
+    embedpano({
+      swf:"/images/qnnpano.swf",
+      xml:"/images/pano.xml",
+      target:"pano",
+      html5:"auto"
+    });
+  }
 });
 function f_scrollTop() {
 	return f_filterResults (

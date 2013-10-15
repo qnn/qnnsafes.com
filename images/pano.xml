@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<krpano onstart="startup();" title="Virtual Tour" version="1.16">
+  <style distorted="true" edge="top" name="skin_hotspotstyle" onclick="if(linkedscene, tween(scale,0.25,0.5); tween(oy,-20,0.5); tween(alpha,0,0.5); looktohotspot(); loadscene(get(linkedscene),null,MERGE,BLEND(1)); skin_updatescroll(); );" onhover="if(skin_settings.tooltips_hotspots, if(linkedscene, showtext(get(scene[get(linkedscene)].title),SKIN_TOOLTIPS)) );" oy="0" scale="0.5" url="/images/vtourskin_hotspot.png"></style>
+  <action name="startup">
+    if(startscene === null, copy(startscene,scene[0].name));
+    loadscene(get(startscene), null, MERGE);
+  </action>
+  <scene heading="" lat="" lng="" name="scene_01" onstart="" thumburl="/images/panoramas/01.tiles/thumb.jpg" title="01">
+    <view fov="120" fovmax="140" fovmin="70" fovtype="MFOV" hlookat="0" limitview="auto" maxpixelzoom="2.0" vlookat="0"></view>
+    <preview url="/images/panoramas/01.tiles/preview.jpg"></preview>
+    <image>
+      <cube url="/images/panoramas/01.tiles/pano_%s.jpg"></cube>
+      <mobile>
+        <cube url="/images/panoramas/01.tiles/mobile_%s.jpg"></cube>
+      </mobile>
+    </image>
+    <hotspot ath="6.052" atv="0.375" linkedscene="scene_02" name="spot1" style="skin_hotspotstyle"></hotspot>
+  </scene>
+  <scene heading="" lat="" lng="" name="scene_02" onstart="" thumburl="/images/panoramas/02.tiles/thumb.jpg" title="02">
+    <view fov="120" fovmax="140" fovmin="70" fovtype="MFOV" hlookat="0" limitview="auto" maxpixelzoom="2.0" vlookat="0"></view>
+    <preview url="/images/panoramas/02.tiles/preview.jpg"></preview>
+    <image>
+      <cube url="/images/panoramas/02.tiles/pano_%s.jpg"></cube>
+      <mobile>
+        <cube url="/images/panoramas/02.tiles/mobile_%s.jpg"></cube>
+      </mobile>
+    </image>
+    <hotspot ath="177.373" atv="0.581" linkedscene="scene_01" name="spot1" style="skin_hotspotstyle"></hotspot>
+  </scene>
+</krpano>

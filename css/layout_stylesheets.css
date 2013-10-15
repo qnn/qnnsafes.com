@@ -694,3 +694,9 @@ table {
     border-right-color: #ccc; }
 #addinfo table tbody tr:first-child td {
   border-top: 1px solid #c8c8c8; }
+
+#pano {
+  width: 900px;
+  height: 350px;
+  margin: 0 auto 15px;
+}
