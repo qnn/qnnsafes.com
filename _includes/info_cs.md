@@ -7,7 +7,7 @@
       <tr align="center" valign="middle"><th>C=Combination lock</th><th>E=factory digital lock</th></tr>
   </table>
 
-**Close-up Features**
+**Features**
       <table width="500" border="1" cellspacing="1">
       <tr align="center" valign="middle">
       <td><img src="http://en.qnnimg.com/products-info/features-cs.jpg" width="300" height="146" /></td>

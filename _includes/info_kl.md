@@ -1,4 +1,4 @@
-**Close-up Features**
+**Features**
   <table width="500" border="1" cellspacing="1">
       <tr align="center" valign="middle">
       <td><img src="http://en.qnnimg.com/products-info/features-13.jpg" width="100" height="120" /></td>

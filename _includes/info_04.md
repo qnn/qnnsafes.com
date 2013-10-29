@@ -9,7 +9,7 @@
       <tr align="center" valign="middle"><th>Emergency Key</th><th>Battery</th><th>Screws</th><th>External Battery Box</th></tr>
   </table>
   
-**Close-up Features**
+**Features**
     <table width="500" border="1" cellspacing="1">
       <tr align="center" valign="middle">
       <td><img src="http://en.qnnimg.com/products-info/features-01.jpg" width="150" height="150" /></td>
