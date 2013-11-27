@@ -700,3 +700,8 @@ table {
   height: 350px;
   margin: 0 auto 15px;
 }
+
+.half {
+  float: left;
+  width: 50%;
+}
