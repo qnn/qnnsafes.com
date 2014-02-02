@@ -5,6 +5,10 @@ QNNSAFES.COM
 
 Official English website of QNN.
 
+Please note that this repository is not being actively maintained.
+
+![qnnsafe com-v2](https://f.cloud.github.com/assets/1284703/2060097/8c590fd2-8bf9-11e3-9670-3bb717b6ba4a.jpg)
+
 Build
 -----
 
